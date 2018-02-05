@@ -2,18 +2,18 @@
   <div id="app">
 
     <!--Makes todos property available to TodoList component-->
-    <todo-list v-bind:todos="todos"></todo-list>
+    <TodoList v-bind:todos="todos"></TodoList>
 
   </div>
 </template>
 
 <script>
-import TodoList from './components/TodoList'
+import TodoList from './components/TodoList';
 
 export default {
   name: 'App',
   components: {
-    TodoList,
+    TodoList
   },
   data() {
     return {
@@ -44,12 +44,4 @@ export default {
 </script>
 
 <style>
-/*#app {*/
-  /*font-family: 'Avenir', Helvetica, Arial, sans-serif;*/
-  /*-webkit-font-smoothing: antialiased;*/
-  /*-moz-osx-font-smoothing: grayscale;*/
-  /*text-align: center;*/
-  /*color: #2c3e50;*/
-  /*margin-top: 60px;*/
-/*}*/
 </style>

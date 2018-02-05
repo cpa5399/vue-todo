@@ -35,10 +35,10 @@
       </div>
     </div>
 
-    <div class='ui bottom attached green basic button' v-show="!isEditing && todo.done" disabled>
+    <div class='ui bottom attached green basic button' v-show="!isEditing && todo.done" v-on:click="toggleStatus(todo)" disabled>
       Completed
     </div>
-    <div class='ui bottom attached red basic button' v-show="!isEditing && !todo.done">
+    <div class='ui bottom attached red basic button' v-show="!isEditing && !todo.done" v-on:click="toggleStatus(todo)">
       Pending
     </div>
   </div>
@@ -61,6 +61,9 @@
       },
       deleteTodo(item) {
         this.$emit('delete-todo', item)
+      },
+      toggleStatus(item) {
+        this.$emit('complete-todo', item);
       }
     }
   }
